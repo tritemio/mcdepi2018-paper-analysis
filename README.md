@@ -1,6 +1,13 @@
 # MC-DEPI Analysis Notebooks
 
-This repository contains notebooks for MC-DEPI analysis and Bayesian optimization.
+This repository contains analysis notebooks for the paper:
+
+> *Monte-Carlo Diffusion-Enhanced Photon Inference:*
+> *Distance Distributions and Conformational Dynamics in single-molecule FRET*
+>
+> Antonino Ingargiola, Shimon Weiss, Eitan Lerner
+
+These notebooks also serve as an example on using the [depi](https://github.com/opensmfs/depi) package.
 
 # Dependencies
 
