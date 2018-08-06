@@ -5,7 +5,7 @@ This repository contains analysis notebooks for the paper:
 > *Monte-Carlo Diffusion-Enhanced Photon Inference:*
 > *Distance Distributions and Conformational Dynamics in single-molecule FRET*
 >
-> Antonino Ingargiola, Shimon Weiss, Eitan Lerner
+> Antonino Ingargiola, Shimon Weiss, Eitan Lerner (2018) https://doi.org/10.1101/385252
 
 These notebooks also serve as an example on using the [depi](https://github.com/opensmfs/depi) package.
 
