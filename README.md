@@ -9,6 +9,8 @@ This repository contains analysis notebooks for the paper:
 
 These notebooks also serve as an example on using the [depi](https://github.com/opensmfs/depi) package.
 
+To run these notebooks online click here [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/tritemio/mcdepi2018-paper-analysis/master)
+
 # Workflow Overview
 
 ## Preprocessing: burst search and grouping
