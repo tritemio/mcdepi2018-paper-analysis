@@ -11,6 +11,11 @@ These notebooks also serve as an example on using the [depi](https://github.com/
 
 To run these notebooks online click here [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/tritemio/mcdepi2018-paper-analysis/master)
 
+# Data
+Raw data files for the 7d and 17 dsDNA samples are available on Figshare:
+
+- [Ingargiola, A; Weiss, S; Lerner, E (2018): Photon-HDF5 files. figshare. Fileset.](https://doi.org/10.6084/m9.figshare.6931271)
+
 # Workflow Overview
 
 ## Preprocessing: burst search and grouping
@@ -21,8 +26,11 @@ To run these notebooks online click here [![Binder](https://mybinder.org/badge.s
 ](https://nbviewer.jupyter.org/github/tritemio/mcdepi2018-paper-analysis/blob/master/Batch%20run%20notebook.ipynb)
 > 4. [Group Results by Name.ipynb ](https://nbviewer.jupyter.org/github/tritemio/mcdepi2018-paper-analysis/blob/master/Group%20Results%20by%20Name.ipynb)
 
-Each sample has several smFRET-PIE measurements in PicoQuant format. First the raw data files are converted to Photon-HDF5
-using notebook [1]. Next, a notebook[2] for burst-search and population selection (D-only, FRET)
+Each sample has several smFRET-PIE measurements in PicoQuant format. 
+First, the raw data files are converted to [Photon-HDF5](photon-hdf5.org)
+using notebook [1]. To re-run the analysis, you can skip this step 
+since we published the data files already in Photon-HDF5 format. 
+Next, a notebook[2] for burst-search and population selection (D-only, FRET)
 is executed in batch (using [3]) on all the data files for a given sample. 
 Bursts for each (sample, population) pair are grouped in a single data file[4] for further analysis.
 
