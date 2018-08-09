@@ -20,19 +20,19 @@ Raw data files for the 7d and 17 dsDNA samples are available on Figshare:
 
 ## Preprocessing: burst search and grouping
 > *Notebooks:*
-> 1. [Export TCSPC decays from ns-ALEX Photon-HDF5.ipynb](https://nbviewer.jupyter.org/github/tritemio/mcdepi2018-paper-analysis/blob/master/Export%20TCSPC%20decays%20from%20ns-ALEX%20Photon-HDF5.ipynb)
-> 2. [PIE Analysis and save bursts.ipynb](https://nbviewer.jupyter.org/github/tritemio/mcdepi2018-paper-analysis/blob/master/PIE%20Analysis%20and%20save%20bursts.ipynb)
-> 3. [Batch run notebook.ipynb
+> 1. [PIE Analysis and save bursts.ipynb](https://nbviewer.jupyter.org/github/tritemio/mcdepi2018-paper-analysis/blob/master/PIE%20Analysis%20and%20save%20bursts.ipynb)
+> 2. [Batch run notebook.ipynb
 ](https://nbviewer.jupyter.org/github/tritemio/mcdepi2018-paper-analysis/blob/master/Batch%20run%20notebook.ipynb)
-> 4. [Group Results by Name.ipynb ](https://nbviewer.jupyter.org/github/tritemio/mcdepi2018-paper-analysis/blob/master/Group%20Results%20by%20Name.ipynb)
+> 3. [Group Results by Name.ipynb ](https://nbviewer.jupyter.org/github/tritemio/mcdepi2018-paper-analysis/blob/master/Group%20Results%20by%20Name.ipynb)
+> 4. [Export TCSPC decays from ns-ALEX Photon-HDF5.ipynb](https://nbviewer.jupyter.org/github/tritemio/mcdepi2018-paper-analysis/blob/master/Export%20TCSPC%20decays%20from%20ns-ALEX%20Photon-HDF5.ipynb)
 
-Each sample has several smFRET-PIE measurements in PicoQuant format. 
-First, the raw data files are converted to [Photon-HDF5](photon-hdf5.org)
-using notebook [1]. To re-run the analysis, you can skip this step 
-since we published the data files already in Photon-HDF5 format. 
-Next, a notebook[2] for burst-search and population selection (D-only, FRET)
-is executed in batch (using [3]) on all the data files for a given sample. 
-Bursts for each (sample, population) pair are grouped in a single data file[4] for further analysis.
+A notebook[1] for burst-search and population selection (D-only, FRET)
+is executed in batch (using [2]) on all the Photon-HDF5 data files for a given sample. 
+Next, burst photon data (timetamps, D/A labels, TCSPC nanotimes) for each (sample, population) pair 
+are grouped in a single data file[4] for further analysis.
+
+Notebook 4 exports fluorescence decays histograms from a smFRET-PIE data file in Photon-HDF5 format.
+This notebok is used to export IRF decays used to simulate realistic TCSPC nanotimes in the following steps.
 
 ## Experimental data analysis and simulation fitting
 > *Notebooks:*
@@ -63,7 +63,8 @@ The standard deviation of the loss function is important for the convergence of 
 
 # Dependencies
 
-- python >= 3.6
+- Python >= 3.6
+- [FRETBursts](https://fretbursts.readthedocs.io) >= 0.7
 - [depi](https://github.com/opensmfs/depi) >= 0.1+14.g413c350
 - [scikit-optimze](https://scikit-optimize.github.io/) >= 0.5.2+39.g000b9d8
 - [randomgen](https://bashtage.github.io/randomgen/) ==1.14.4 (next-generation RNG, soon to be included in numpy)
