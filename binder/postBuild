@@ -1,0 +1,4 @@
+#!/bin/bash
+conda activate mcdepi
+pip install git+https://github.com/scikit-optimize/scikit-optimize/ --upgrade
+pip install git+https://github.com/OpenSMFS/depi/ --upgrade
