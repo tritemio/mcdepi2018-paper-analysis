@@ -116,10 +116,8 @@ dependencies:
   - zeromq=4.2.2=hbedb6e5_2
   - zlib=1.2.11=ha838bed_2
   - pip:
-    - depi==0.1+2.gb746e21
     - pycorrelate==0.3
     - randomgen==1.14.4
-    - scikit-optimize==0.5.2+39.g000b9d8
     - tables==3.4.2
 prefix: /home/anto/.conda/envs/mcdepi
 
