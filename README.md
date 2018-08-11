@@ -61,6 +61,11 @@ The notebooks, [6] and [7], first perform a single user-define simulation, then 
 and finally the run an optimization procedure to find the best parameters fitting the experimental data.
 The standard deviation of the loss function is important for the convergence of the optimizatio algorithm.
 
+# Additional Notebooks
+> - [Continous-Time Markov Chain.ipynb](https://nbviewer.jupyter.org/github/tritemio/mcdepi2018-paper-analysis/blob/master/Continous-Time%20Markov%20Chain.ipynb)
+
+This notebooks demonstrates an implementation of Continous-Time Markov Chain matrix formalism using numpy.
+
 # Dependencies
 
 - Python >= 3.6
