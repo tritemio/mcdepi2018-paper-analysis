@@ -73,3 +73,60 @@ This notebooks demonstrates an implementation of Continous-Time Markov Chain mat
 - [depi](https://github.com/opensmfs/depi) >= 0.1+14.g413c350
 - [scikit-optimze](https://scikit-optimize.github.io/) >= 0.5.2+39.g000b9d8
 - [randomgen](https://bashtage.github.io/randomgen/) ==1.14.4 (next-generation RNG, soon to be included in numpy)
+
+# Installation
+
+Follow the instructions below to create a reproducible conda environment to run the notebooks in this reposotory.
+
+Install Anaconda 3 distribuition and follow these steps.
+
+1) In a terminal, type each single line (assuring that there is not error):
+
+```
+conda activate depi_env
+conda install fretbursts ipython
+pip install randomgen
+pip install git+https://github.com/scikit-optimize/scikit-optimize/ --upgrade
+pip install pycorrelate
+conda install depi
+```
+
+The previous command installs the `depi` python package and all dependencies in an conda environment called `depi_env`.
+
+Type `ipython` and try runnning:
+
+```python
+import depi
+```
+
+If you don't get any error type quit to exit ipython.
+
+2) We need to create a "kernel" which allows using that environment from the notebook. 
+   In the same terminal as before (after exiting ipython) type:
+
+```
+python -m ipykernel install --name depi_env --display-name "MC-DEPI (Python 3.6)"
+```
+
+3) Download the mcdepi notebooks used for the 2018 MC-DEPI paper from github:
+
+https://github.com/tritemio/mcdepi2018-paper-analysis/archive/master.zip
+
+In the folder where you put these notebook make a subfolder data/results 
+(one inside the other) and extract there the archive you download from:
+
+https://ndownloader.figshare.com/files/12753497?private_link=4080f1df435c07e7bd21
+
+(this is the burst data for the dsDNA smFRET-PIE measurements)
+
+4) Finally, in a new terminal, launch the notebook with `jupyter notebook`. Create a notebook. Make sure you choose the MC-DEPI kernel.
+
+5) From the notebook tab, navigate to the depi notebooks and open:
+
+     Burst Analysis-DEPI-sim2-E_nanotime.ipynb
+
+Select the MC-DEPI kernel and run (at least) the first part until the single-condition DEPI simulation. No error should occur.
+Running the full fit may require several hours of computations depeding on initial conditions, model, number of iterations and 
+processing power.
+
+
