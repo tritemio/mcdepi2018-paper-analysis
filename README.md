@@ -102,7 +102,7 @@ Type `ipython` and try runnning:
 import depi
 ```
 
-If you don't get any error type quit to exit ipython.
+You should get no error. Type `quit` to exit ipython.
 
 2) We need to create a "kernel" which allows using that environment from the notebook.
    In the same terminal as before (after exiting ipython) type:
@@ -111,16 +111,16 @@ If you don't get any error type quit to exit ipython.
 python -m ipykernel install --name depi_env --display-name "MC-DEPI (Python 3.6)"
 ```
 
-3) Download the mcdepi notebooks used for the 2018 MC-DEPI paper from github:
+3) Download the notebooks used for the 2018 MC-DEPI paper from github:
 
 https://github.com/tritemio/mcdepi2018-paper-analysis/archive/master.zip
 
-In the folder where you put these notebook make a subfolder data/results
+In the folder where you put these notebooks, make a subfolder `data/results`
 (one inside the other) and extract there the archive you download from:
 
 https://ndownloader.figshare.com/files/12753497?private_link=4080f1df435c07e7bd21
 
-(this is the burst data for the dsDNA smFRET-PIE measurements)
+(this is the burst data for the dsDNA smFRET-PIE measurements used in the paper).
 
 4) Finally, in a new terminal, launch the notebook with `jupyter notebook`. Create a notebook. Make sure you choose the MC-DEPI kernel.
 
